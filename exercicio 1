@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula2</title>
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1 style="color: rgb(0, 139, 53);">Entendi Porra Nenhuma</h1>
+<p style="color: rgb(0, 139, 53);"> Achei que essa materia era mais facil, vou faltar mais não </p>
+<center>
+<img width="80%" src="https://essentia.med.br/blog/wp-content/uploads/2014/10/Confuso-homem.jpg" />
+</center>
+</body>
+<a href="html/galeria.html">
+    galeria
+</a>
+<OL>
+    <LI>
+        <a href="html/galeria.html">
+    galeria
+</a>
+    </LI>
+    <LI>
+        CARROS
+    </LI>
+    <LI>
+        VAGÃO
+    </LI>
+</OL>
+</htm>      
