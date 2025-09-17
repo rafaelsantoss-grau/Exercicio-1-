@@ -54,4 +54,155 @@ tarefas = gerenciarTarefas(tarefas, "listar");
 
 </script>
 </body>
+<html>
+
+                                                         Parte 2
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Sistema Veterinário Interativo</title>
+</head>
+<body>
+<script>
+
+let nomeTutor = prompt("Olá, seja bem-vindo à nossa clínica! Qual é o seu nome?");
+alert("Seja bem-vindo, " + nomeTutor + "! Estamos felizes em receber você e seu pet.");
+
+
+let idadeTutor = parseInt(prompt("Qual é a sua idade?"));
+if (idadeTutor >= 18) {
+    alert("Você é maior de idade e está autorizado a prosseguir.");
+} else {
+    alert("Você é menor de idade. Para alguns atendimentos, será necessário um responsável maior de idade.");
+}
+
+
+let numeroSorte = parseInt(prompt("Digite seu número da sorte:"));
+if (numeroSorte % 2 === 0) {
+    alert("O número " + numeroSorte + " é par!");
+} else {
+    alert("O número " + numeroSorte + " é ímpar!");
+}
+
+
+let operacao = prompt("Deseja simular custos? Escolha a operação (+, -, *, /):");
+let valor1 = parseFloat(prompt("Digite o primeiro valor:"));
+let valor2 = parseFloat(prompt("Digite o segundo valor:"));
+let resultadoCalc;
+
+switch(operacao) {
+    case '+':
+        resultadoCalc = valor1 + valor2;
+        break;
+    case '-':
+        resultadoCalc = valor1 - valor2;
+        break;
+    case '*':
+        resultadoCalc = valor1 * valor2;
+        break;
+    case '/':
+        if (valor2 !== 0) {
+            resultadoCalc = valor1 / valor2;
+        } else {
+            resultadoCalc = "Erro: divisão por zero!";
+        }
+        break;
+    default:
+        resultadoCalc = "Operação inválida!";
+}
+alert("Resultado da operação: " + resultadoCalc);
+
+let mesAno = prompt("Informe o mês do ano (ex: janeiro):").toLowerCase();
+let estacao;
+
+switch(mesAno) {
+    case "dezembro":
+    case "janeiro":
+    case "fevereiro":
+        estacao = "verão";
+        break;
+    case "março":
+    case "abril":
+    case "maio":
+        estacao = "outono";
+        break;
+    case "junho":
+    case "julho":
+    case "agosto":
+        estacao = "inverno";
+        break;
+    case "setembro":
+    case "outubro":
+    case "novembro":
+        estacao = "primavera";
+        break;
+    default:
+        estacao = "mês inválido!";
+}
+alert("A estação correspondente é: " + estacao);
+
+
+let numeroPositivo = parseInt(prompt("Digite um número positivo, por exemplo a idade do seu pet:"));
+if (numeroPositivo > 0) {
+    alert("Número registrado: " + numeroPositivo);
+    let pares = [];
+    let contador = numeroPositivo + 1;
+    while (pares.length < 5) {
+        if (contador % 2 === 0) {
+            pares.push(contador);
+        }
+        contador++;
+    }
+    alert("Próximos 5 números pares após " + numeroPositivo + ": " + pares.join(", "));
+} else {
+    alert("Número inválido! Deve ser maior que zero.");
+}
+
+
+function idadeHumana(idadeCao) {
+    return idadeCao * 7;
+}
+let idadeCao = parseInt(prompt("Qual a idade do seu cachorro?"));
+alert("A idade do seu cachorro em anos humanos é: " + idadeHumana(idadeCao));
+
+function areaQuadrado(lado) {
+    return lado * lado;
+}
+function areaTriangulo(base, altura) {
+    return (base * altura) / 2;
+}
+function areaCirculo(raio) {
+    return Math.PI * raio * raio;
+}
+
+let forma = prompt("Gostaria de calcular a área de qual forma geométrica? (quadrado, triangulo, circulo)").toLowerCase();
+let area;
+
+switch(forma) {
+    case "quadrado":
+        let lado = parseFloat(prompt("Digite o valor do lado do quadrado:"));
+        area = areaQuadrado(lado).toFixed(2);
+        alert("A área do quadrado é: " + area);
+        break;
+    case "triangulo":
+        let base = parseFloat(prompt("Digite a base do triângulo:"));
+        let altura = parseFloat(prompt("Digite a altura do triângulo:"));
+        area = areaTriangulo(base, altura).toFixed(2);
+        alert("A área do triângulo é: " + area);
+        break;
+    case "circulo":
+        let raio = parseFloat(prompt("Digite o raio do círculo:"));
+        area = areaCirculo(raio).toFixed(2);
+        alert("A área do círculo é: " + area);
+        break;
+    default:
+        alert("Forma geométrica inválida!");
+}
+
+
+alert("Obrigado por utilizar o sistema da clínica veterinária, " + nomeTutor + ". Seu pet agradece e desejamos um ótimo atendimento!");
+</script>
+</body>
 </html>
