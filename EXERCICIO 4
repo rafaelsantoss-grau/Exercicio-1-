@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Verificador de Faixa Etária</title>
+</head>
+<body>
+    <script>
+        let ano_nas = Number(prompt("Digite seu ano de nascimento"));
+        let idade = 2025 - ano_nas
+        console.log(idade)
+            if(idade <=12){
+            console.log("Você é uma Criança");
+        }else if(idade<18){
+            console.log("Você é um Adolecente");
+        }else if(idade<60){
+            console.log("Você é um adulto");
+        } else if(idade<110){
+            console.log("Você é um idoso");
+        }
+
+    </script>
+
+</body>
+</html>
