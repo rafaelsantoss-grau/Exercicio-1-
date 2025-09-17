@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Gerenciador de Tarefas Básico</title>
+</head>
+<body>
+<script>
+function gerenciarTarefas(listaDeTarefas, acao) {
+    if (acao === "adicionar") {
+        let descricao = prompt("Digite a descrição da tarefa:");
+        listaDeTarefas.push({ descricao: descricao, concluida: false });
+        alert("Tarefa adicionada!");
+    } 
+    else if (acao === "remover") {
+        let novaLista = [];
+        for (let i = 0; i < listaDeTarefas.length; i++) {
+            if (!listaDeTarefas[i].concluida) {
+                novaLista.push(listaDeTarefas[i]);
+            }
+        }
+        listaDeTarefas = novaLista;
+        alert("Tarefas concluídas removidas!");
+    } 
+    else if (acao === "listar") {
+        let mensagem = "Tarefas pendentes:\n";
+        for (let i = 0; i < listaDeTarefas.length; i++) {
+            if (!listaDeTarefas[i].concluida) {
+                mensagem += (i + 1) + ". " + listaDeTarefas[i].descricao + "\n";
+            }
+        }
+        alert(mensagem);
+    } 
+    else {
+        alert("Ação inválida!");
+    }
+
+    return listaDeTarefas;
+}
+
+
+let tarefas = [
+    { descricao: "Estudar", concluida: false },
+    { descricao: "Fazer exercícios", concluida: false },
+    { descricao: "Trabalhar", concluida: false }
+];
+
+
+tarefas = gerenciarTarefas(tarefas, "listar");
+tarefas = gerenciarTarefas(tarefas, "adicionar");
+tarefas[0].concluida = true; 
+tarefas = gerenciarTarefas(tarefas, "remover");
+tarefas = gerenciarTarefas(tarefas, "listar");
+
+</script>
+</body>
+</html>
